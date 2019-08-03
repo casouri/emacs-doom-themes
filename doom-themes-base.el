@@ -336,7 +336,7 @@
     (company-tooltip-selection  :background selection-bg :foreground selection-fg :weight 'bold)
 
     (company-tooltip-common     :foreground fg-hl :distant-foreground hl-fg :weight 'bold)
-    ;; (company-tooltip-common-selection )
+    (company-tooltip-common-selection :foreground selection-fg-hl)
 
     (company-tooltip-search     :background hl-bg :foreground hl-fg :weight 'bold)
     (company-tooltip-search-selection :background (doom-darken selection-bg 0.25))
@@ -604,7 +604,7 @@
     (helm-grep-finish            :foreground green)
     (helm-swoop-target-line-face       :background selection-bg :foreground selection-fg)
     (helm-swoop-target-line-block-face :foreground yellow)
-    (helm-swoop-target-word-face       :foreground fg-hl-3 :inherit 'bold)
+    (helm-swoop-target-word-face       :foreground fg-hl :inherit 'bold :distant-foreground selection-fg)
     (helm-swoop-target-number-face     :foreground fg-weak)
 
     ;; helpful
@@ -752,6 +752,10 @@
     (lsp-ui-peek-peek :background (doom-darken bg 0.1))
     (lsp-ui-peek-highlight :inherit 'lsp-ui-peek-header :background region :foreground bg :box t)
     (lsp-ui-peek-line-number :foreground success)
+
+    ;; eldoc-box
+    (eldoc-box-border (&dark :background (doom-lighten bg-alt 0.1))
+                      (&light :background (doom-darken bg-alt 0.1)))
 
     ;; magit
     (magit-bisect-bad        :foreground red)
@@ -981,6 +985,11 @@
     ;; yasnippet
     (yas-field-highlight-face :inherit 'match)
 
+    ;; snails
+    (snails-content-buffer-face :inherit 'tooltip)
+    (snails-input-buffer-face :inherit 'tooltip :height 1.3)
+    (snails-select-line-face :background selection-bg :foreground selection-fg)
+
 
     ;; --- major-mode faces -------------------
     ;; agda2-mode
@@ -1138,7 +1147,8 @@
 
     ;; org-mode
     (org-archived                 :foreground fg-weak)
-    (org-block-begin-line         :inherit 'org-block :foreground fg-weak :background bg-alt)
+    (org-block                    :inherit 'org-verbatim :background bg-alt)
+    (org-block-begin-line         :inherit 'org-block :foreground fg-weak)
     (org-block-end-line           :inherit 'org-block-begin-line)
     (org-checkbox                 :inherit 'org-todo)
     (org-checkbox-statistics-done :inherit 'org-done)
@@ -1177,7 +1187,7 @@
     (org-tag             :foreground fg-weak :weight 'normal)
     (org-ref-cite-face   :foreground yellow :weight 'light :underline t)
     (org-todo            :foreground green :bold 'inherit)
-    (org-verbatim        :inherit 'fixed-pitch)
+    (org-verbatim        :inherit 'fixed-pitch :height 0.9)
     (org-warning         :foreground warning)
     (org-formula         :inherit 'org-verbatim)
 
