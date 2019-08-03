@@ -81,9 +81,10 @@ light variant is from dracula, blue is from city light."
    (vertical-bar   (doom-darken bg-alt 0.1))
    (selection-bg   cyan)
    (selection-fg   (doom-darken bg 0.2))
+   (selection-fg-hl magenta)
    (builtin        cyan)
    (comments       fg-weak)
-   (constants      violet2)
+   (constants      yellow)
    (functions      magenta)
    (keywords       cyan)
    (methods        cyan)
@@ -110,6 +111,7 @@ light variant is from dracula, blue is from city light."
   ;; --- extra faces ------------------------
   ((lazy-highlight :background nil :weight 'bold)
    (cursor :background cyan :foreground selection-fg)
+   (hl-line :background (doom-blend blue-alt (doom-lighten bg 0.07) 0.1))
 
    ;; helm
    (helm-separator :foreground yellow)
@@ -130,7 +132,12 @@ light variant is from dracula, blue is from city light."
    (mode-line           :background blue-alt  :foreground fg :font (font-spec :family "SF Pro Text" :size 13.5 :weight 'light))
    (mode-line-inactive  :background bg-alt     :foreground fg-alt :font (font-spec :family "SF Pro Text" :size 13.5 :weight 'light))
 
+   ;; helm
+   (helm-swoop-target-word-face       :foreground yellow :inherit 'bold)
+
    ;; company
+   (company-tooltip-common-selection :foreground nil)
+
 
    ;; fringe
    (fringe :foreground yellow)

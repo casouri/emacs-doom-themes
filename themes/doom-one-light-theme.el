@@ -33,6 +33,7 @@
    (vertical-bar   (doom-darken bg-alt 0.1))
    (selection-bg   blue)
    (selection-fg   hl-fg)
+   (selection-fg-hl selection-fg)
    (builtin        magenta)
    (constants      violet)
    (functions      magenta)
@@ -52,13 +53,14 @@
    (vc-deleted     red)
    (modeline-bg (doom-darken bg 0.1))
    (modeline-fg fg)
-   (modeline-bg-inactive bg)
+   (modeline-bg-inactive (doom-darken bg 0.05))
    (modeline-fg-inactive (doom-darken fg 0.3)))
 
 
   ;; --- extra faces ------------------------
   ((cursor :background "black")
-   (font-lock-doc-face :slant 'italic)
+   (font-lock-doc-face :slant 'italic :foreground fg-weak)
+   (hl-line :background (doom-darken bg-alt 0.03))
    (mode-line
     :background modeline-bg :foreground modeline-fg
     :font (font-spec :family "SF Pro Text" :size 13.0 :weight 'light))
