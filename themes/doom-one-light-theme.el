@@ -72,6 +72,8 @@
    (variable-pitch :family "Source Serif Pro" :height 150 :weight 'medium)
 
    ;; --- major-mode faces -------------------
+
+   (org-block-begin-line :inherit 'org-block :foreground fg-weak :slant 'italic)
    )
 
   ;; --- extra variables ---------------------
