@@ -658,21 +658,12 @@
     ((indent-guide-face &inherit highlight-indentation-face))
 
     ;; ivy
-    (ivy-current-match :background region :distant-foreground nil)
-    (ivy-minibuffer-match-face-1
-     :background nil
-     :foreground (doom-lighten grey 0.14)
-     :weight 'light)
-    (ivy-minibuffer-match-face-2
-     :inherit 'ivy-minibuffer-match-face-1
-     :foreground magenta :background fg-hl :weight 'semi-bold)
-    (ivy-minibuffer-match-face-3
-     :inherit 'ivy-minibuffer-match-face-2
-     :foreground green :weight 'semi-bold)
-    (ivy-minibuffer-match-face-4
-     :inherit 'ivy-minibuffer-match-face-2
-     :foreground yellow :weight 'semi-bold)
-    (ivy-minibuffer-match-highlight :foreground violet)
+    (ivy-current-match :background hl-bg :foreground hl-fg)
+    (ivy-minibuffer-match-face-1 :foreground fg-hl :weight 'bold) ; match background
+    (ivy-minibuffer-match-face-2 :foreground fg-hl-2 :weight 'bold)
+    (ivy-minibuffer-match-face-3 :foreground fg-hl-3 :weight 'bold)
+    (ivy-minibuffer-match-face-4 :inherit 'ivy-minibuffer-match-face-1)
+    (ivy-minibuffer-match-highlight :weight 'bold) ; match under point
     (ivy-highlight-face :foreground violet)
     (ivy-confirm-face :foreground success)
     (ivy-match-required-face :foreground error)
@@ -1181,13 +1172,15 @@
     (org-meta-line       :foreground fg-weak)
     (org-priority        :foreground red)
     (org-property-value  :foreground fg-weak)
-    (org-quote           :inherit 'org-block :slant 'italic)
+    (org-quote           :inherit '(org-default org-block) :slant 'italic)
     (org-special-keyword :foreground fg-weak)
     (org-table           :inherit 'org-block :background bg)
     (org-tag             :foreground fg-weak :weight 'normal)
     (org-ref-cite-face   :foreground yellow :weight 'light :underline t)
     (org-todo            :foreground green :bold 'inherit)
-    (org-verbatim        :inherit 'fixed-pitch :height 0.9)
+    ;; floating point calculates height based on underlying face,
+    ;; then verbatim text in table has height 0.9 * 0.9
+    (org-verbatim        :inherit 'fixed-pitch :height (lambda (_) (ceiling (* 0.9 (face-attribute 'default :height)))))
     (org-warning         :foreground warning)
     (org-formula         :inherit 'org-verbatim)
 
