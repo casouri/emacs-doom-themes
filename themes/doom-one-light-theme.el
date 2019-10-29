@@ -67,8 +67,6 @@
    (mode-line-inactive
     :background modeline-bg-inactive :foreground modeline-fg-inactive
     :font (font-spec :family "SF Pro Text" :size 13.0 :weight 'light))
-   (mode-line-emphasis
-    :foreground hl-fg)
    (variable-pitch :family "Source Serif Pro" :height 150 :weight 'medium)
 
    ;; --- major-mode faces -------------------

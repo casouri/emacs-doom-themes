@@ -52,7 +52,7 @@
     ;; mode-line / header-line
     (mode-line           :background bg     :foreground fg     :distant-foreground bg)
     (mode-line-inactive  :background bg-alt :foreground fg-weak :distant-foreground bg-alt)
-    (mode-line-emphasis  :foreground fg-hl :distant-foreground bg)
+    (mode-line-emphasis  :bold t)
     (mode-line-highlight :inherit 'highlight :distant-foreground bg)
     (mode-line-buffer-id :weight 'bold)
     (header-line :inherit 'mode-line :distant-foreground bg)
