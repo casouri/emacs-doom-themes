@@ -53,6 +53,8 @@ light variant is from dracula, blue is from city light."
                  ('light  '("#92A8D1" "#2d2d2d" "white"        ))
                  ('blue   '("#728CA0" "#2d2d2d" "white"        ))))
 
+   (white      (doom-gencolor "#FFFFFF"))
+   (black      (doom-gencolor "#000000"))
    (grey        fg-weak)
    (red         '("#FF414A" "red1"            "red"          ))
    (orange      '("#FF8743" "OrangeRed1"      "brightred"    ))

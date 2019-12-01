@@ -12,6 +12,8 @@
    (fg         (doom-gencolor "#383a42"))
    (fg-strong  (doom-gencolor "#1b2229")) ; base8
 
+   (white      (doom-gencolor "#FFFFFF"))
+   (black      (doom-gencolor "#000000"))
    (grey       fg-weak)
    (red        (doom-gencolor "#e45649"))
    (orange     (doom-gencolor "#da8548"))
@@ -68,6 +70,12 @@
     :background modeline-bg-inactive :foreground modeline-fg-inactive
     :font (font-spec :family "SF Pro Text" :size 13.0 :weight 'light))
    (variable-pitch :family "Source Serif Pro" :height 150 :weight 'medium)
+
+   ;; --- term -------------------------------
+   ;;                              8                                        0
+   (term-color-black   :background (doom-darken fg-weak 0.3)    :foreground fg)
+   ;;                              15                                       7
+   (term-color-white   :background bg                           :foreground fg-weak)
 
    ;; --- major-mode faces -------------------
 

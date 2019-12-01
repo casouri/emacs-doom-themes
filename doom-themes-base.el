@@ -207,14 +207,14 @@
     ;; term
     (term               :foreground fg)
     (term-bold          :weight 'bold)
-    (term-color-black   :background hl-fg   :foreground hl-fg)
+    (term-color-black   :background grey    :foreground black)
     (term-color-red     :background red     :foreground red)
     (term-color-green   :background green   :foreground green)
     (term-color-yellow  :background yellow  :foreground yellow)
     (term-color-blue    :background blue    :foreground blue)
     (term-color-magenta :background magenta :foreground magenta)
     (term-color-cyan    :background cyan    :foreground cyan)
-    (term-color-white   :background fg-strong   :foreground fg-strong)
+    (term-color-white   :background white   :foreground white)
 
     ;; window-divider
     (window-divider :inherit 'vertical-border)
