@@ -1138,7 +1138,7 @@
 
     ;; org-mode
     (org-archived                 :foreground fg-weak)
-    (org-block                    :inherit 'org-verbatim :background bg-alt)
+    (org-block                    :inherit 'org-verbatim :background bg-alt :extend t)
     (org-block-begin-line         :inherit 'org-block :foreground fg-weak)
     (org-block-end-line           :inherit 'org-block-begin-line)
     (org-checkbox                 :inherit 'org-todo)
