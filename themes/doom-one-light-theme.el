@@ -70,6 +70,8 @@
     :background modeline-bg-inactive :foreground modeline-fg-inactive
     :font (font-spec :family "SF Pro Text" :size 13.0 :weight 'light))
    (variable-pitch :family "Source Serif Pro" :height 150 :weight 'medium)
+   ;; highlight-parenthesis
+   (hl-paren-face :foreground "red")
 
    ;; --- term -------------------------------
    ;;                              8                                        0

@@ -221,6 +221,8 @@
     (window-divider-first-pixel :inherit 'window-divider)
     (window-divider-last-pixel  :inherit 'window-divider)
 
+    ;; highlight-parenthesis
+    (hl-paren-face :foreground blue)
 
     ;; --- plugin faces -----------------------
     ;; all-the-icons
