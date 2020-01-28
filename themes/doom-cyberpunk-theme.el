@@ -127,7 +127,7 @@ light variant is from dracula, blue is from city light."
    (helm-buffer-process :foreground cyan)
 
    ;; highlight-parenthesis
-   (hl-paren-face :foreground "green")
+   (hl-paren-face :foreground "green" :weight 'bold)
 
    ;; variable pitch
    (variable-pitch :family "Source Serif Pro" :height 150 :weight 'medium)
