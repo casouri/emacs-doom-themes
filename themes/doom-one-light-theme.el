@@ -6,11 +6,11 @@
   "A light theme inspired by Atom One"
 
   ;; name        default   256       16
-  ((bg         (doom-gencolor "#fafafa"))
-   (bg-alt     (doom-gencolor "#f0f0f0")) ; base0123
+  ((bg         (doom-gencolor "#fefefc"))
+   (bg-alt     (doom-gencolor "#e8e8e4")) ; base0123
    (fg-weak    (doom-gencolor "#9ca0a4")) ; base4567
-   (fg         (doom-gencolor "#383a42"))
-   (fg-strong  (doom-gencolor "#1b2229")) ; base8
+   (fg         (doom-gencolor "#1b2229"))
+   (fg-strong  (doom-gencolor "#0e0e0e")) ; base8
 
    (white      (doom-gencolor "#FFFFFF"))
    (black      (doom-gencolor "#000000"))
